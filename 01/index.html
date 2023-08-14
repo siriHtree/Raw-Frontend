@@ -8,10 +8,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
     <main>
+        <svg width="100%" height="100%">
+
+            <pattern id="pattern-circles" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
+               <circle id="pattern-circle" cx="10" cy="10" r="1.6257413380501518" fill="#bfc0c4"></circle>
+            </pattern>
+
+            <rect  id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
+
+
+          </svg>
         <nav>
             <div id="nLft">
                 <div id="logo">
@@ -22,8 +33,6 @@
                     </div>
                 </div>
                 <a href="#">Products</a><a href="#">App</a><a href="#">About</a><a href="#">FAQ</a>
-
-
             </div>
             <div id="nRt">
                 <div id="loginContainer">
@@ -33,6 +42,7 @@
                     <button id="signup">
                         Signup
                     </button>
+                    <i class="ri-menu-line"></i>
                 </div>
 
             </div>
@@ -40,10 +50,46 @@
         </nav>
         <section id="hero">
             <div id="hLft">
+                <div id="hTxt">
+                      <h6>More Offers</h6>
+                <h1>There is <br> something else <br> for you</h1>
+                </div>
+
+                <div id="cartContainer">
+                    <div id="cartLft">
+                        <h6>Shop</h6>
+                        <h4>All products</h4>
+                    </div>
+                    <div id="cartRt">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </div>
+                </div>
 
 
             </div>
             <div id="hRt">
+                <div class="hRtElm">
+                    <div class="rtContent" style="background: url(https://images.unsplash.com/photo-1533162507191-d90c625b2640?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80);
+    background-position: 30% 42%">
+                        <div><h6>World of Hearing Technology</h6> <i class="ri-arrow-right-up-line"></i></div>
+                        <h1>View our blog</h1>
+                    </div>
+
+                </div>
+                <div class="hRtElm">
+                    <div>
+                        <div class="rtContent" style="background-color: #B385FD;">
+                            <div><h6>Discover our history</h6> <i class="ri-arrow-right-up-line"></i></div>
+                        <h1>About us</h1>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="rtContent" style="background-color: #B1F040;">
+                            <div><h6>Have some questions?</h6> <i class="ri-send-plane-line"></i></div>
+                        <h1>Contact us</h1>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>

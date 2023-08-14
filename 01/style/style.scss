@@ -13,9 +13,23 @@ main{
     min-height:100vh;
 
 }
+
+@mixin Mobile($width){
+    @media (max-width:$width) {
+        @content;
+    }
+}
 :root{
     --primary:#262626;
     --card:#E2E3E7;
+}
+svg{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+
 }
 nav{
     width:100%;
@@ -24,6 +38,9 @@ nav{
     display:flex;
     padding: 0 10vmin;
     justify-content: space-between;
+    @include Mobile(1000px){
+        padding: 0 5vmin;
+    }
     #nLft{
         width:50%;
         height:inherit;
@@ -62,6 +79,12 @@ nav{
             color:var(--primary);
             margin-left: 2em;
             font-weight: 500;
+            @include Mobile(1000px){
+                margin-left: 1em;
+            }
+            @include Mobile(650px){
+            display: none;
+            }
 
         }
     }
@@ -79,6 +102,7 @@ nav{
             align-items: center;
             justify-content: space-between;
             padding: .5em;
+
             button{
                 width: 46%;
                 height: 100%;
@@ -95,25 +119,218 @@ nav{
                     background-color: transparent;
                     color: var(--primary);
                 }
+                @include Mobile(650px){
+                    display: none;
+                }
+            }
+            @include Mobile(1000px){
+                width: 20vmax;
+            }
+            @include Mobile(650px){
+                width: fit-content;
+                padding: 1em;
+                cursor: pointer;
+            }
+            i{
+                display: none;
+                @include Mobile(650px){
+                    display: initial;
+                }
+            }
+
+        }
+    }
+    @include Mobile(650px){
+        height: 10vh;
+        font-size: 13px;
+    }
+}
+#hero{
+    width:100%;
+    min-height:75vh;
+    // background-color: beige;
+    display: flex;
+    padding: 0 10vmin;
+    justify-content: space-between;
+    padding-bottom: 5vmin;
+    @include Mobile(1000px){
+        padding: 0 5vmin;
+        padding-bottom: 5vmin;
+    }
+    @include Mobile(950px){
+        flex-direction: column;
+    }
+    #hLft{
+        width: 48%;
+            min-height:inherit;
+            border-radius: 2em;
+            background: url(https://images.unsplash.com/photo-1691534986201-e68427e5c741?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80);
+            background-position: -100% 25%;
+            background-repeat: no-repeat;
+            // background-size: cover;
+            background-color: #111C20;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 6vmin 5vmin;
+            @include Mobile(950px){
+                width: 100%;
+                min-height: 50vh;
+                font-size: 14px;
+
+            }
+            #hTxt{
+                &>h6{
+                color:#fff;
+                font-weight: 400;
+                text-transform: uppercase;
+                font-size: 1em;
+                letter-spacing: .1em;
+                font-size: .9em;
+                margin-bottom: 1em;
+            }
+            h1{
+                color:#fff;
+                font-size: 3.5em;
+                font-weight: 400;
+                line-height: 1em;
+            }
+            }
+
+            #cartContainer {
+                height: 7vh;
+                background-color: var(--card);
+                width: 13vmax;
+                display: flex;
+                justify-content: space-between;
+                border-radius: .5em;
+                padding: 0 .5em;
+
+                #cartLft {
+                    width: 70%;
+                    height: inherit;
+                    padding: .5em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    h6 {
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        letter-spacing:.1em;
+                        color:#9f9fa1;
+                        font-size: .7em;
+
+                    }
+                    h4{
+                        font-weight: 400;
+                        font-size: 2vmin;
+                        @include Mobile(550px){
+                            font-size: 3vmin;
+
+                        }
+
+                    }
+                }
+                #cartRt{
+                    width: 23%;
+                    height: inherit;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-left:2px solid #d4d2d2;
+
+                }
+                @include Mobile(1311px){
+                    width: 15vmax;
+                }
+                @include Mobile(1145px){
+                    width: 20vmax;
+                }
+            }
+    }
+    #hRt{
+        width:50%;
+        min-height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include Mobile(950px){
+            width: 100%;
+            min-height: 30vh;
+
+        }
+        @include Mobile(350px){
+            min-height: 25vh;
+
+        }
+        .hRtElm{
+            height: 46%;
+            width: 100%;
+            border-radius: 1em;
+            display: flex;
+            justify-content: space-between;
+
+
+            &:last-child{
+                &>div{
+                    width: 48%;
+                    height: 100%;
+                    border-radius: 1em;
+                }
+            }
+            @include Mobile(950px){
+                margin-top: 1em;
+                height: 30vh;
             }
 
         }
     }
 }
-#hero{
-    width:100%;
-    height:85vh;
-    // background-color: beige;
+.rtContent{
+    // background-color: red;
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    padding: 1em;
     display: flex;
-    padding: 0 10vmin;
-    #hLft{
-        width:50%;
-        height:inherit;
-        // background-color: red;
+    flex-direction: column;
+    justify-content: space-between;
+    @include Mobile(950px){
+       border-radius: 1em;
+
     }
-    #hRt{
-        width:50%;
-        height:inherit;
-        // background-color: yellow;
+    &>div{
+        display: flex;
+        justify-content: space-between;
+        h6{
+            font-size: 2vmin;
+            text-transform: uppercase;
+            font-weight: 400;
+            color:var(--primary);
+            @include Mobile(550px){
+                font-size: 3vmin;
+
+            }
+        }
+        i{
+            font-size: 3.5vmin;
+            font-weight: 200;
+            color:var(--primary);
+        }
     }
+    h1{
+        font-size: 6vmin;
+        font-weight: 400;
+        color:var(--primary);
+        @include Mobile(550px){
+            font-size: 8vmin;
+
+        }
+    }
+
 }
+
+
+
+
