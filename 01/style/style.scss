@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+main{
+    width:100%;
+    min-height:100vh;
+
+}
+:root{
+    --primary:#262626;
+    --card:#E2E3E7;
+}
+nav{
+    width:100%;
+    height:15vh;
+    // background-color: wheat;
+    display:flex;
+    padding: 0 10vmin;
+    justify-content: space-between;
+    #nLft{
+        width:50%;
+        height:inherit;
+        // background-color: beige;
+        display: flex;
+        align-items: center;
+        #logo{
+            width:2.5em;
+            height:2.5em;
+            background-color:var(--primary);
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            border-radius: 50%;
+            #lCircle{
+                width:1.5em;
+                height:1.5em;
+                border:2px solid #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items:flex-start;
+                justify-content: center;
+                #lDot{
+                    height: .3em;
+                    width:.3em;
+                    background-color: #fff;
+                    border-radius:50%;
+                    margin-top: .3em;
+
+                }
+
+            }
+        }
+        a{
+            text-decoration:none;
+            color:var(--primary);
+            margin-left: 2em;
+            font-weight: 500;
+
+        }
+    }
+    #nRt{
+        height:inherit;
+        // background-color: aquamarine;
+        display: flex;
+        align-items: center;
+        #loginContainer{
+            width: 15vmax;
+            height: 40%;
+            background-color: #E2E3E7;
+            border-radius: .5em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .5em;
+            button{
+                width: 46%;
+                height: 100%;
+                border: none;
+                background-color: var(--primary);
+                color:#fff;
+                border-radius: .5em;
+                text-transform: uppercase;
+                font-size: .7em;
+                letter-spacing: .1em;
+                font-weight: 600;
+                cursor: pointer;
+                &:first-child{
+                    background-color: transparent;
+                    color: var(--primary);
+                }
+            }
+
+        }
+    }
+}
+#hero{
+    width:100%;
+    height:85vh;
+    // background-color: beige;
+    display: flex;
+    padding: 0 10vmin;
+    #hLft{
+        width:50%;
+        height:inherit;
+        // background-color: red;
+    }
+    #hRt{
+        width:50%;
+        height:inherit;
+        // background-color: yellow;
+    }
+}
