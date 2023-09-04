@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#box1 {
+    width: 100%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    padding: 10vmin;
+    padding-bottom: 0;
+    justify-content: space-between;
+}
+
+.txt {
+    width: 40%;
+
+    h2 {
+        font-size: 2em;
+        font-weight: 400
+    }
+
+    P {
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+
+    i {
+        color: rgb(0, 183, 255);
+    }
+
+    h5 {
+        font-size: 1.2em;
+        font-weight: 400;
+        margin-top: 1em;
+    }
+}
+
+.img-container {
+    height: 50vh;
+    position: relative;
+    width: 100%;
+    // background-color: rgba(255, 255, 0, 0.253);
+
+    .pic {
+        position: absolute;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:nth-child(1) {
+            width: 60%;
+            // top: 50%;
+        }
+
+        &:nth-child(2) {
+            width: 30%;
+            transform: translate(-50%, -50%);
+            top: 0%;
+            left: 70%;
+
+
+        }
+    }
+}
+
+#box2 {
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+
+    .b-elm {
+        width: 80%;
+        height: 100vh;
+        padding: 5vmin;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .txt {
+            color: #fff;
+
+            h2 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.3em;
+            }
+        }
+
+
+        &:nth-child(1) {
+            .img-container {
+                .pic {
+                    &:nth-child(1) {
+                        width: 35%;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%;
+                    }
+
+                    &:nth-child(2) {
+                        width: 40%;
+                        transform: translate(-50%, -50%);
+                        top: 20%;
+                        left: 80%;
+
+
+                    }
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .img-container {
+                .pic {
+                    &:nth-child(1) {
+                        width: 35%;
+                        transform: translate(-50%, -50%);
+                        top: 50%;
+                        left: 50%
+                    }
+
+                    &:nth-child(2) {
+                        width: 30%;
+                        transform: translate(-50%, -50%);
+                        top: 100%;
+                        left: 73%;
+
+
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+#box3 {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10vmin;
+
+    .txt {
+
+        h2 {
+            font-size: 3.2em;
+            font-weight: 300;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    }
+
+    .img-container {
+        .pic {
+            width: 40%;
+            transform: translate(-50%, -50%);
+            left: 70%;
+            top: 30%;
+
+        }
+    }
+
+}
+
+#part1 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 15vmin 20vmin;
+    background-color: #E0E0E0;
+
+    h1 {
+        font-size: 6em;
+        font-weight: 300;
+    }
+
+    #ram {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20vmin;
+    }
+
+    .txt {
+        width: 35%;
+        margin-top: 5vmin;
+
+        h2 {
+            font-size: 3em;
+            font-weight: 300;
+        }
+    }
+
+    .phone-img-container {
+        width: 60%;
+        height: 80vh;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+
+        }
+    }
+
+    #big-screen {
+        width: 100%;
+        height: 70vh;
+        background-color: #fff;
+        margin-top: 10vmin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10vmin 5vmin;
+
+        h3 {
+            font-size: 3em;
+            font-weight: 300;
+            text-align: left;
+            width: 100%;
+        }
+
+        #big-phone {
+            width: 80%;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

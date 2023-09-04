@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+#box1 {
+  width: 100%;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  padding: 10vmin;
+  padding-bottom: 0;
+  justify-content: space-between;
+}
+
+.txt {
+  width: 40%;
+}
+.txt h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+.txt P {
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+.txt i {
+  color: rgb(0, 183, 255);
+}
+.txt h5 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-top: 1em;
+}
+
+.img-container {
+  height: 50vh;
+  position: relative;
+  width: 100%;
+}
+.img-container .pic {
+  position: absolute;
+}
+.img-container .pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img-container .pic:nth-child(1) {
+  width: 60%;
+}
+.img-container .pic:nth-child(2) {
+  width: 30%;
+  transform: translate(-50%, -50%);
+  top: 0%;
+  left: 70%;
+}
+
+#box2 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+}
+#box2 .b-elm {
+  width: 80%;
+  height: 100vh;
+  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#box2 .b-elm .txt {
+  color: #fff;
+}
+#box2 .b-elm .txt h2 {
+  font-size: 3em;
+}
+#box2 .b-elm .txt p {
+  font-size: 1.3em;
+}
+#box2 .b-elm:nth-child(1) .img-container .pic:nth-child(1) {
+  width: 35%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+#box2 .b-elm:nth-child(1) .img-container .pic:nth-child(2) {
+  width: 40%;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 80%;
+}
+#box2 .b-elm:nth-child(2) .img-container .pic:nth-child(1) {
+  width: 35%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+#box2 .b-elm:nth-child(2) .img-container .pic:nth-child(2) {
+  width: 30%;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 73%;
+}
+
+#box3 {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10vmin;
+}
+#box3 .txt h2 {
+  font-size: 3.2em;
+  font-weight: 300;
+}
+#box3 .txt p {
+  font-size: 1.2em;
+}
+#box3 .img-container .pic {
+  width: 40%;
+  transform: translate(-50%, -50%);
+  left: 70%;
+  top: 30%;
+}
+
+#part1 {
+  width: 100%;
+  min-height: 100vh;
+  padding: 15vmin 20vmin;
+  background-color: #E0E0E0;
+}
+#part1 h1 {
+  font-size: 6em;
+  font-weight: 300;
+}
+#part1 #ram {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20vmin;
+}
+#part1 .txt {
+  width: 35%;
+  margin-top: 5vmin;
+}
+#part1 .txt h2 {
+  font-size: 3em;
+  font-weight: 300;
+}
+#part1 .phone-img-container {
+  width: 60%;
+  height: 80vh;
+  position: relative;
+}
+#part1 .phone-img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+}
+#part1 #big-screen {
+  width: 100%;
+  height: 70vh;
+  background-color: #fff;
+  margin-top: 10vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10vmin 5vmin;
+}
+#part1 #big-screen h3 {
+  font-size: 3em;
+  font-weight: 300;
+  text-align: left;
+  width: 100%;
+}
+#part1 #big-screen #big-phone {
+  width: 80%;
+}
+#part1 #big-screen #big-phone img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style.css.map */
