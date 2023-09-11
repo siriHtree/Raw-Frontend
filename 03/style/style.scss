@@ -58,9 +58,134 @@ nav {
     background: url(https://images.unsplash.com/photo-1589859762194-eaae75c61f64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80);
     background-position: center;
     background-size: cover;
+    display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        #h-top{
+            width: 100%;
+            height: 50vh;
+            // background-color: yellow;
+            padding-top:12vh;
+            display: flex;
+            justify-content: space-between;
+        }
 
-    h1 {
-        font-family: "Calcio-Demo";
+        #midTxt {
+            width: 100%;
+            position: relative;
+
+            #h-biscuit{
+                position: absolute;
+                width: 50vmax;
+                transform: translate(-50%,-50%);
+                left:50%;
+                top:-50%;
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            h1 {
+                    font-family: "Calcio-Demo";
+                color: #fff;
+                    margin: 0 auto;
+                    width: fit-content;
+                    font-size: 20vmax;
+                }
+}
+
+}
+.h-elm{
+    width:25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:5vmin;
+    .h-elm-elm{
+        h3{
+            color:#fff;
+            font-size: 1.5em;
+            margin-bottom: 2vmin;
+        }
+        i{
+            color:#FCB969;
+            font-size: 1.5em;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            padding: .2em;
+        }
+    }
+    #social{
+        i{
+            background-color: #fff;
+            border-radius: 50%;
+            color:#0258BF;
+            padding: .3em;
+        }
+    }
+
+}
+
+#cake-pics{
+    display: flex;
+
+    .c-pic{
+        width: 5em;
+        height: 5em;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        margin-left: 1em;
+        position: relative;
+        img{
+            width: 120%;
+            height: 120%;
+            object-fit: contain;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+#second{
+    width: 100%;
+    min-height: inherit;
+    padding: 5vmin;
+
+    .s-elm{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            color:#200B00;
+            font-family: "Calcio-Demo";
+            text-transform: uppercase;
+            font-size:9em;
+            width: 80%;
+            padding: .1em;
+            text-align: center;
+        }
+        .s-pic{
+            width: 20%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        }
+        &:nth-child(2){
+            flex-direction: row-reverse;
+            background-color: #200B00;
+            h2{
+                color:#fff;
+            }
+        }
     }
 
 }
